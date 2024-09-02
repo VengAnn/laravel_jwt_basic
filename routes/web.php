@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/form', function () {
-    //event(new \App\Events\NotifyProcessed('Test message from the server'));
+    // event(new \App\Events\NotifyProcessed('Test message from the server'));
     return view('form');
 });
 
