@@ -241,7 +241,22 @@ You can customize the JWT token expiration time, blacklist functionality, and mo
 You can add custom claims to the JWT by modifying the getJWTCustomClaims method in the User model.
 
 
+////////////////////////////////////////////////////////////////////
+####Set Up Laravel Broadcasting
+1. run => composer require pusher/pusher-php-server
 
+2. modify file .env 
+```bash
+BROADCAST_DRIVER=pusher
+
+PUSHER_APP_ID=your-pusher-app-id
+PUSHER_APP_KEY=your-pusher-app-key
+PUSHER_APP_SECRET=your-pusher-app-secret
+PUSHER_APP_CLUSTER=your-pusher-app-cluster
+
+3. Create a Event Notify
+```bash
+=> php artisan make:event NotifyProcessed
 
 
 
